@@ -1,0 +1,7 @@
+{
+  "name": "AD03_TareaEvaluativa_01",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
