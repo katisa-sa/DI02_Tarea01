@@ -11,22 +11,22 @@ i<ion-header [translucent]="true">
     <!-- 
     Utilizamos *ngFor para leer los items de una lista que se leen de un array de objetos JSON definidos en el fichero .ts
   -->
-    <ion-item *ngFor="let item of gestionNoticias.getListaNoticias()">
+    <ion-item *ngFor="let item2 of gestionNoticias.getListaNoticias()">
       <ion-card>
         <ion-card-header>
-          <ion-card-title>{{item.author}}</ion-card-title>
-          <ion-card-subtitle>{{item.title}}</ion-card-subtitle>
+          <ion-card-title>{{item2.author}}</ion-card-title>
+          <ion-card-subtitle>{{item2.title}}</ion-card-subtitle>
         </ion-card-header>
-        <img [src]="item.urlToImage"/>
+        <img [src]="item2.urlToImage"/>
         <ion-card-content>
-          <p>{{item.description}}</p>
+          <p>{{item2.description}}</p>
         </ion-card-content>
         <ion-item>
-          <ion-label><a [href]="item.url">Leer</a></ion-label>
+          <ion-label><a [href]="item2.url">Leer</a></ion-label>
           <!-- 
             creamos una función alert que se cree al pulsar el icono de la basura
           -->
-          <ion-button fill="clear" (click)="presentAlert(item)">
+          <ion-button fill="clear" (click)="presentAlert(item2)">
             <ion-icon slot="end"  name="trash-outline"></ion-icon>
           </ion-button>
         </ion-item>

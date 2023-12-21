@@ -54,15 +54,20 @@ export class GestionNoticiasService {
     //Busca si la noticia esta en el array, si es así la borra
     //Encuentra el título y lo compara
     let titulo: string ='';
+    
     this.articulos.find(not=> {
       return JSON.stringify(not) == JSON.stringify(noticia);
     })
+
     // Sacamos el indice si no existe dará -1 por lo que si existe lo borramos
     let index:number = this.articulos.indexOf(noticia);
+    
     if (index != -1)
       this.listaNoticias.splice(index,1);
+    
+    let index2:number = this.listaNoticias.indexOf(noticia);
+    if (index2 != -1)
+    this.listaNoticias.splice(index2,1);
   }
-
-  
 
 }
