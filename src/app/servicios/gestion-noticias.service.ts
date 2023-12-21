@@ -61,10 +61,10 @@ export class GestionNoticiasService {
 
     // Sacamos el indice si no existe dará -1 por lo que si existe lo borramos
     let index:number = this.articulos.indexOf(noticia);
-    
+    // borramos en pagina 1
     if (index != -1)
       this.listaNoticias.splice(index,1);
-    
+    //borramos en pagina leer
     let index2:number = this.listaNoticias.indexOf(noticia);
     if (index2 != -1)
     this.listaNoticias.splice(index2,1);
